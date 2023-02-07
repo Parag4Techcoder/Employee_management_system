@@ -25,7 +25,8 @@ SECRET_KEY = 'b%h5$w2-b^2(%5=@86)g@dk4&k5vp86$so3&qv&h2=d(%7pit%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+
 
 
 # Application definition
@@ -127,3 +128,10 @@ LOGOUT_REDIRECT_URL = 'home'
 
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
 MEDIA_URL = '/media/'
+
+
+import os
+
+
+STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
